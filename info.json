@@ -1,0 +1,15 @@
+{
+    "type": "Standard",
+    "name": "Polygon SF Editor",
+    "icon": ":/CC/plugin/qPolygonSFEditor/icon.png",
+    "description": "Interactive polygon-based scalar field editing tool",
+    "authors": [
+        {
+            "name": "Junyi",
+            "email": "junyi.tian@outlook.com"
+        }
+    ],
+    "version": "1.0.0",
+    "minCCVersion": "2.12.0",
+    "maxCCVersion": "2.13.99"
+}
