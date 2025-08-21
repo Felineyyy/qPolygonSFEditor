@@ -22,7 +22,7 @@ public:
     explicit qPolygonSFEditor(QObject* parent = nullptr);
 
     //! 析构函数
-    virtual ~qPolygonSFEditor() override = default;
+    ~qPolygonSFEditor() override = default;
 
     // 继承自ccStdPluginInterface的接口
     virtual QString getName() const override { return "Polygon SF Editor"; }

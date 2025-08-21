@@ -1,5 +1,5 @@
 #include "SFValueInputDialog.h"
-#include "ui_sfValueInputDialog.h"
+#include "ui_SFValueInputDialog.h"
 
 // Qt
 #include <QPushButton>

@@ -7,7 +7,7 @@
 #include <QMessageBox>
 #include <QStyle>
 #include <QMainWindow>
-#include <QDebug>  // 添加这行
+#include <QDebug>
 
 // CC includes
 #include <ccPointCloud.h>
@@ -17,12 +17,13 @@
 
 qPolygonSFEditor::qPolygonSFEditor(QObject* parent)
     : QObject(parent)
-    , ccStdPluginInterface(":/CC/plugin/qPolygonSFEditor/info.json")  // 改回使用资源文件
+    , ccStdPluginInterface(":/CC/plugin/qPolygonSFEditor/info.json")
     , m_action(nullptr)
     , m_tool(nullptr)
 {
+    qDebug() << "qPolygonSFEditor constructor start";
+    qDebug() << "qPolygonSFEditor constructor completed successfully";
 }
-
 
 QString qPolygonSFEditor::getDescription() const
 {
@@ -34,8 +35,7 @@ QString qPolygonSFEditor::getDescription() const
 QIcon qPolygonSFEditor::getIcon() const
 {
     qDebug() << "qPolygonSFEditor::getIcon() called";
-    // 返回空图标，避免资源问题
-    return QIcon();
+    return QIcon(QString::fromUtf8(":/CC/plugin/qPolygonSFEditor/icon.png"));
 }
 
 void qPolygonSFEditor::onNewSelection(const ccHObject::Container& selectedEntities)

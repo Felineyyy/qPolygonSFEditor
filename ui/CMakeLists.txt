@@ -1,4 +1,5 @@
+
 target_sources( ${PROJECT_NAME}
     PRIVATE
-        ${CMAKE_CURRENT_LIST_DIR}/sfValueInputDialog.ui
+        ${CMAKE_CURRENT_LIST_DIR}/SFValueInputDialog.ui
 )
