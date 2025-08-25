@@ -1,4 +1,3 @@
-````markdown
 # qPolygonSFEditor 插件说明
 
 本插件需放置在 `CloudCompare/plugins/core/Standard/` 文件夹下。  
