@@ -397,22 +397,21 @@ void PolygonSFEditAction::processPolygonSelection()
     
     QString sfName = QString::fromStdString(sf->getName());
     
-    // Get current min/max for reference
-    sf->computeMinAndMax();
-    ScalarType currentMin = sf->getMin();
-    ScalarType currentMax = sf->getMax();
-    
+    // Fixed range [0, 255]
+    ScalarType fixedMin = 0;
+    ScalarType fixedMax = 255;
+
     // Get new value from user
     bool ok;
     double newValue = QInputDialog::getDouble(nullptr, 
         "Set Scalar Field Value",
         QString("Enter new value for %1 points in scalar field '%2':\n"
-                "(Current range: %3 to %4)")
+                "(Allowed range: %3 to %4)")
             .arg(selectedPoints.size())
             .arg(sfName)
-            .arg(currentMin)
-            .arg(currentMax),
-        0.0, -1e9, 1e9, 6, &ok);
+            .arg(fixedMin)
+            .arg(fixedMax),
+        0.0, fixedMin, fixedMax, 6, &ok);
     
     if (ok)
     {
