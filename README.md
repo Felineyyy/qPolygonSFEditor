@@ -10,6 +10,7 @@ CloudCompare 源码文件请从官方仓库获取：  https://github.com/CloudCo
 在 `CloudCompare/plugins/core/Standard/CMakeLists.txt` 中添加本插件路径：
 
 ```cmake
+...
 add_subdirectory( qSRA )
 add_subdirectory( qMeshBoolean )
 add_subdirectory( qPolygonSFEditor ) # 添加本插件路径
