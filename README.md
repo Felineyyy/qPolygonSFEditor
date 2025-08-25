@@ -1,5 +1,5 @@
 qPolygonSFEditor文件夹需放置在CloudCompare/plugins/core/Standard文件夹下。
-CloudCompare源码文件从官方https://github.com/CloudCompare/CloudCompare自行拉取。
+CloudCompare源码文件从官方https://github.com/CloudCompare/CloudCompare 自行拉取。
 
 CMakeLists修改
 对于CloudCompare/plugins/core/Standard文件夹下的CMakeLists.txt，在文件路径中添加qPolygonSFEditor：
