@@ -1,8 +1,7 @@
 # qPolygonSFEditor 插件说明
 
 本插件需放置在 `CloudCompare/plugins/core/Standard/` 文件夹下。  
-CloudCompare 源码文件请从官方仓库获取：  
-👉 [CloudCompare 官方 GitHub](https://github.com/CloudCompare/CloudCompare)
+CloudCompare 源码文件请从官方仓库获取：  https://github.com/CloudCompare/CloudCompare
 
 ---
 
