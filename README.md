@@ -1,45 +1,66 @@
-qPolygonSFEditor文件夹需放置在CloudCompare/plugins/core/Standard文件夹下。
-CloudCompare源码文件从官方https://github.com/CloudCompare/CloudCompare 自行拉取。
+你现在的 README 基本是纯文本，放到 GitHub 上就缺少 Markdown 的格式化。GitHub 默认支持 **Markdown**，你只要加上 `# 标题`、`**加粗**`、代码块 `...` 就能排版得很清楚。
 
+我帮你整理成一个规范的 `README.md`：
 
-CMakeLists修改
+````markdown
+# qPolygonSFEditor 插件说明
 
-对于CloudCompare/plugins/core/Standard文件夹下的CMakeLists.txt，在文件路径中添加qPolygonSFEditor：
-....
+本插件需放置在 `CloudCompare/plugins/core/Standard/` 文件夹下。  
+CloudCompare 源码文件请从官方仓库获取：  
+👉 [CloudCompare 官方 GitHub](https://github.com/CloudCompare/CloudCompare)
+
+---
+
+## CMakeLists 修改
+
+在 `CloudCompare/plugins/core/Standard/CMakeLists.txt` 中添加本插件路径：
+
+```cmake
 add_subdirectory( qSRA )
-
 add_subdirectory( qMeshBoolean )
+add_subdirectory( qPolygonSFEditor ) # 添加本插件路径
+````
 
-add_subdirectory( qPolygonSFEditor ) //添加本插件路径
+> 其他地方不需要修改。
 
-其他地方均不需要做修改。
+---
 
+## CloudCompare 编译安装
 
-CloudCompare编译安装
+* 本插件默认安装为 **ON**：
 
-本qPolygonSFEditor插件安装默认为ON，其他插件通过cmake自行指定。其他想改为默认安装的插件也可以在各自目录下的CMakeLists中将默认的OFF部分改为ON：
-
+```cmake
 option( PLUGIN_STANDARD_QPOLYGONSF_EDITOR "Install qPolygonSFEditor plugin" ON )
+```
 
-CloudCompare源码默认build后需要make install来指定插件和部分工具运行路径。由于涉及到路径修改，多数情况下需要系统权限：
+* 其他插件可在各自 `CMakeLists.txt` 中将默认的 `OFF` 改为 `ON`。
+* CloudCompare 源码 build 后，需要执行 `make install` 来指定插件和部分工具运行路径。
+  多数情况下需要系统权限：
+
+```bash
 sudo make install
+```
 
-而后运行直接输入程序名即可运行：
+* 安装完成后，直接输入以下命令即可运行：
+
+```bash
 CloudCompare
+```
 
+---
 
-qPolygonSFEditor使用说明
+## qPolygonSFEditor 使用说明
 
-qPolygonSFEditor内置绘图逻辑与segment基本一致。
+插件内置绘图逻辑与 **segment** 基本一致。
 
-1.选定文件
+1. 选定文件
+2. 选定需要修改的 SF
+3. 点击插件工具中 **Polygon SF Editor**
+4. 开始绘制多边形
 
-2.选定需要修改的SF
+   * 左键点击：绘制
+   * 右键：结束绘制
+5. 自动弹出改值窗口，输入目标值，按下 **Enter** 即可修改
+6. 修改完成后会默认退出插件，下次修改从步骤 **3 \~ 5** 继续
 
-3.点击插件工具中Polygon SF Editor
-
-4.开始绘制多边形，左键点击绘制，右键结束绘制
-
-5.自动弹出改值窗口，输入目标值，按下Enter即可修改
-
-6.值修改后会默认退出插件，下次修改冲入3~5步骤
+---
