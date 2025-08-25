@@ -1,7 +1,6 @@
-<!DOCTYPE RCC>
-<RCC version="1.0">
-    <qresource prefix="/CC/plugin/qPolygonSFEditor">
-        <file>info.json</file>
-        <file>icon.png</file>
-    </qresource>
+<RCC>
+  <qresource prefix="/CC/plugin/qPolygonSFEditor">
+    <file>info.json</file>
+    <file>icon.png</file>
+  </qresource>
 </RCC>
