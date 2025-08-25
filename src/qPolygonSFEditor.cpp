@@ -22,11 +22,6 @@ void qPolygonSFEditor::onNewSelection( const ccHObject::Container &selectedEntit
     
     bool enabled = checkSelection();
     m_action->setEnabled( enabled );
-    
-    if ( enabled )
-    {
-        m_action->setToolTip( getDescription() + "\n(Shortcut: P)" );
-    }
 }
 
 QList<QAction *> qPolygonSFEditor::getActions()
@@ -36,7 +31,6 @@ QList<QAction *> qPolygonSFEditor::getActions()
         m_action = new QAction( getName(), this );
         m_action->setToolTip( getDescription() );
         m_action->setIcon( getIcon() );
-        m_action->setShortcut( QKeySequence( "P" ) );
         connect( m_action, &QAction::triggered, this, &qPolygonSFEditor::doAction );
     }
     return { m_action };
