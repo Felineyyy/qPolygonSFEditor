@@ -1,7 +1,3 @@
-你现在的 README 基本是纯文本，放到 GitHub 上就缺少 Markdown 的格式化。GitHub 默认支持 **Markdown**，你只要加上 `# 标题`、`**加粗**`、代码块 `...` 就能排版得很清楚。
-
-我帮你整理成一个规范的 `README.md`：
-
 ````markdown
 # qPolygonSFEditor 插件说明
 
